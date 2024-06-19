@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 6</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .error {
+        color: #d9534f;
+        font-size: 12px;
+        display: none;
+      }
+      .form-container {
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-6 form-container">
+          <form id="registrationForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" />
+              <span class="error" id="nameError">Name is required</span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+              />
+              <span class="error" id="emailError">Email is required</span>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+              />
+              <span class="error" id="passwordError">Password is required</span>
+            </div>
+            <div class="form-group">
+              <label for="hobbies">Hobbies</label>
+              <select class="form-control" id="hobbies" name="hobbies">
+                <option value="">Select</option>
+                <option value="reading">Reading</option>
+                <option value="sports">Sports</option>
+                <option value="music">Music</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-danger btn-block">
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+      document
+        .getElementById("registrationForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          var name = document.getElementById("name").value.trim();
+          var email = document.getElementById("email").value.trim();
+          var password = document.getElementById("password").value.trim();
+
+          var nameError = document.getElementById("nameError");
+          var emailError = document.getElementById("emailError");
+          var passwordError = document.getElementById("passwordError");
+
+          var valid = true;
+
+          if (name === "") {
+            nameError.style.display = "block";
+            valid = false;
+          } else {
+            nameError.style.display = "none";
+          }
+
+          if (email === "") {
+            emailError.style.display = "block";
+            valid = false;
+          } else {
+            emailError.style.display = "none";
+          }
+
+          if (password === "") {
+            passwordError.style.display = "block";
+            valid = false;
+          } else {
+            passwordError.style.display = "none";
+          }
+
+          if (valid) {
+            // Submit the form or perform other actions
+            alert("Form submitted successfully!");
+          }
+        });
+    </script>
+  </body>
+</html>

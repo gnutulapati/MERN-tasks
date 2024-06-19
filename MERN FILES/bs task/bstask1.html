@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 1</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      .top-bar {
+        background-color: #00bcd4;
+        color: white;
+        text-align: center;
+        padding: 10px 0;
+      }
+      .nav-bar {
+        background-color: #f0f0f0;
+        padding: 10px 0;
+      }
+      .nav-bar .nav-link {
+        color: black;
+        padding: 10px 15px;
+      }
+      .nav-bar .nav-link:hover {
+        background-color: #ddd;
+        color: black;
+      }
+      .side-bar {
+        background-color: #616161;
+        color: white;
+        height: 100vh;
+        padding: 10px;
+      }
+      .main-content {
+        padding: 20px;
+        min-height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-bar">
+      <h1>Ethnus Layout</h1>
+    </div>
+
+    <div class="nav-bar">
+      <nav class="container">
+        <div class="row">
+          <div class="col-md-8">
+            <a class="nav-link d-inline" href="#">HOME</a>
+            <a class="nav-link d-inline" href="#">MENU</a>
+            <a class="nav-link d-inline" href="#">ABOUT</a>
+            <a class="nav-link d-inline" href="#">CONTACT</a>
+          </div>
+          <div class="col-md-4 text-right">
+            <a class="nav-link d-inline" href="#">SIGNUP</a>
+            <a class="nav-link d-inline" href="#">LOGIN</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-9 main-content">
+          <p>Write your content here</p>
+        </div>
+        <div class="col-md-3 side-bar">
+          <p>This is</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

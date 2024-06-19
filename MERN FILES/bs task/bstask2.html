@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task 2</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+      .top-bar {
+        background-color: #fcb914;
+        color: black;
+        padding: 10px 0;
+      }
+      .top-bar .navbar-brand {
+        font-weight: bold;
+      }
+      .top-bar .navbar-nav .nav-link {
+        color: black;
+      }
+      .top-bar .navbar-nav .nav-link:hover {
+        color: #fff;
+      }
+      .nav-bar {
+        background-color: #041c32;
+      }
+      .nav-bar .nav-link {
+        color: white;
+        padding: 10px 15px;
+      }
+      .nav-bar .nav-link:hover {
+        color: #fcb914;
+      }
+      .hero-section {
+        position: relative;
+        color: white;
+        text-align: center;
+        padding: 100px 0;
+      }
+      .hero-section .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+      }
+      .hero-section .content {
+        position: relative;
+        z-index: 2;
+      }
+      .hero-section .btn {
+        background-color: #fcb914;
+        color: black;
+        border: none;
+      }
+      .features-section {
+        padding: 0;
+      }
+      .features-section .feature-box {
+        text-align: center;
+        padding: 20px;
+        color: white;
+        margin: 0;
+        border-radius: 0;
+        min-height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .features-section .feature-box:nth-child(odd) {
+        background-color: #041c32;
+      }
+      .features-section .feature-box:nth-child(even) {
+        background-color: #fcb914;
+        color: black;
+      }
+      .features-section .feature-box img {
+        width: 50px;
+        height: 50px;
+      }
+      .hero-section img,
+      .features-section img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="top-bar">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <a class="navbar-brand" href="#">Builderz</a>
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Opening Hour</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Call Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Email Us</a>
+              </li>
+            </ul>
+          </div>
+          <button class="btn btn-dark ml-auto">Get A Quote</button>
+        </nav>
+      </div>
+    </div>
+
+    <div class="nav-bar">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item"><a class="nav-link" href="#">HOME</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">ABOUT</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">SERVICE</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">TEAM</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">PROJECT</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">PAGES</a></li>
+              <li class="nav-item"><a class="nav-link" href="#">CONTACT</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <div
+      class="hero-section"
+      style="
+        background: url('#') no-repeat center center;
+        background-size: cover;
+      "
+    >
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="content">
+          <h1>We Are Professional</h1>
+          <h2>For Your Dream Project</h2>
+          <button class="btn btn-lg">Get A Quote</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="features-section">
+      <div class="container-fluid">
+        <div class="row no-gutters">
+          <div class="col-md-4 feature-box">
+            <img src="worker.png" alt="Icon" />
+            <h3>Expert Worker</h3>
+            <p>
+              Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare
+              velit non.
+            </p>
+          </div>
+          <div class="col-md-4 feature-box">
+            <img src="building.jpg" alt="Icon" />
+            <h3>Quality Work</h3>
+            <p>
+              Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare
+              velit non.
+            </p>
+          </div>
+          <div class="col-md-4 feature-box">
+            <img src="247support.png" alt="Icon" />
+            <h3>24/7 Support</h3>
+            <p>
+              Lorem ipsum dolor sit amet elit. Phasellus nec pretium ornare
+              velit non.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

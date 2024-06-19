@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with Validation</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      .form-group {
+        position: relative;
+      }
+      .form-control.is-invalid {
+        border-color: #dc3545;
+      }
+      .invalid-feedback {
+        display: block;
+      }
+      .form-control + .invalid-feedback::before {
+        content: "\f00d";
+        font-family: FontAwesome;
+        position: absolute;
+        right: 10px;
+        top: 12px;
+        color: #dc3545;
+      }
+      .form-control-feedback {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        pointer-events: none;
+        color: #aaa;
+      }
+      .form-control-feedback.invalid-feedback {
+        color: #dc3545;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form id="contactForm" novalidate>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-user"></i></span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              id="firstName"
+              placeholder="First Name"
+              required
+            />
+            <div class="form-control-feedback"></div>
+          </div>
+          <div class="invalid-feedback">Please supply your first name</div>
+        </div>
+
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-user"></i></span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              id="lastName"
+              placeholder="Last Name"
+              required
+            />
+            <div class="form-control-feedback"></div>
+          </div>
+          <div class="invalid-feedback">Please supply your last name</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-Mail</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="fa fa-envelope"></i
+              ></span>
+            </div>
+            <input
+              type="email"
+              class="form-control"
+              id="email"
+              placeholder="E-Mail Address"
+              required
+            />
+            <div class="form-control-feedback"></div>
+          </div>
+          <div class="invalid-feedback">Please supply your email address</div>
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone #</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-phone"></i></span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              id="phone"
+              placeholder="(845)555-1212"
+              required
+            />
+            <div class="form-control-feedback"></div>
+          </div>
+          <div class="invalid-feedback">Please supply your phone number</div>
+        </div>
+
+        <div class="form-group">
+          <label for="address">Address</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-home"></i></span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              placeholder="Address"
+              required
+            />
+            <div class="form-control-feedback"></div>
+          </div>
+          <div class="invalid-feedback">Please supply your street address</div>
+        </div>
+
+        <div class="form-group">
+          <label for="city">City</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"
+                ><i class="fa fa-building"></i
+              ></span>
+            </div>
+            <input
+              type="text"
+              class="form-control"
+              id="city"
+              placeholder="City"
+              required
+            />
+            <div class="form-control-feedback"></div>
+          </div>
+          <div class="invalid-feedback">Please supply your city</div>
+        </div>
+
+        <div class="form-group">
+          <label for="state">State</label>
+          <select class="form-control" id="state" required>
+            <option value="">Please select your state</option>
+            <option value="NY">New York</option>
+            <option value="CA">California</option>
+            <option value="TX">Texas</option>
+          </select>
+          <div class="invalid-feedback">Please select your state</div>
+        </div>
+
+        <div class="form-group">
+          <label>Do you have hosting?</label>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="hosting"
+              id="hostingYes"
+              value="yes"
+              required
+            />
+            <label class="form-check-label" for="hostingYes">Yes</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="hosting"
+              id="hostingNo"
+              value="no"
+              required
+            />
+            <label class="form-check-label" for="hostingNo">No</label>
+          </div>
+          <div class="invalid-feedback">Please select an option</div>
+        </div>
+
+        <div class="form-group">
+          <label for="projectDescription">Project Description</label>
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <span class="input-group-text"><i class="fa fa-pencil"></i></span>
+            </div>
+            <textarea
+              class="form-control"
+              id="projectDescription"
+              placeholder="Project Description"
+              required
+            ></textarea>
+          </div>
+          <div class="invalid-feedback">
+            Please supply a project description
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-warning">
+          Send <i class="fa fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(
+              forms,
+              function (form) {
+                form.addEventListener(
+                  "submit",
+                  function (event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                  },
+                  false
+                );
+              }
+            );
+          },
+          false
+        );
+      })();
+    </script>
+  </body>
+</html>
